@@ -8,7 +8,7 @@ class GoogleTestCase(unittest.TestCase):
         self.browser = webdriver.Chrome()
         self.addCleanup(self.browser.quit)
 
-    def testPageTitle(self):
+    def test_PageTitle(self):
         self.browser.get('http://www.google.com')
         self.assertIn('Google', self.browser.title)
 
